@@ -1,0 +1,8 @@
+export const WATERSTANDARD = {
+    CUSTD: 1000,
+    IRONSTD: 300,
+    LEADSTD:0,
+    CRSTD: 50,
+    NITRATESTD: 45,
+    MERCURYSTD: 2
+}
