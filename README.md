@@ -1,5 +1,15 @@
 # Water-Contest
 
+## Introduction
+
+The primary purpose of our project is to empower California residents with one integrated drinking water information platform and two-way data communication system. We built a one-stop access interactive platform by using government open database and build a the two-way data communication to allow sharing home water quality data with all stakeholders in the community.
+
+![alt text](https://github.com/jyao8112/CA-Water-Contest/blob/master/screenshots/Screen%20Shot%202019-10-01%20at%2011.41.28%20PM.png)
+![alt text](https://github.com/jyao8112/CA-Water-Contest/blob/master/screenshots/Screen%20Shot%202019-10-01%20at%2011.44.17%20PM.png)
+![alt text](https://github.com/jyao8112/CA-Water-Contest/blob/master/screenshots/Screen%20Shot%202019-10-01%20at%2011.54.10%20PM.png)
+![alt text](https://github.com/jyao8112/CA-Water-Contest/blob/master/screenshots/Screen%20Shot%202019-10-01%20at%2011.56.19%20PM.png)
+## Demo
+[![Watch the Demo](https://github.com/jyao8112/CA-Water-Contest/blob/master/screenshots/IMG_7755.jpg)](https://www.youtube.com/watch?v=PsBkwDi22XA&feature=youtu.be)_
 ## Frontend Set-up Instruction
 
 This instruction will help you start running frontend project on your local machine.
