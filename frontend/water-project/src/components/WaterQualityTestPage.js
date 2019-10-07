@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { submitWaterQualityData } from '../actions/waterQualityData';
+import { MetalContentConclusion } from './MetalContentConclusion';
 import { TestResultMap } from './Map/TestResultMap';
 import { UserInputField } from './UserInputField';
 import { Row, Col} from 'react-bootstrap';
@@ -47,7 +48,8 @@ class WaterQualityTestPage extends React.Component {
     }
 
     render() {
-        const {showGraphResult, goodMarkers, badMarkers, user_lat, user_lon} = this.props;
+        const {showGraphResult, goodMarkers, badMarkers, user_lat, user_lon, cuStd,
+            leadStd,ironStd,mercuryStd,chromiumStd,nitrateStd,showStdRes} = this.props;
 
         console.log('Current markers:', goodMarkers);
 
@@ -108,16 +110,22 @@ class WaterQualityTestPage extends React.Component {
                         <Row style={{marginTop: "20px"}}>
                             <Col>
                                 <input className = "button" type="submit" value="Share" onClick={this.onSubmit}/>
-                                {/* <button className = "button" type ="button"style={{marginLeft: "5px"}} ><a style={{color:"white"}} href='https://www.wikihow.com/Test-Water-Quality' class="active" target="_blank">Learn More about Home Water Test</a></button> */}
                             </Col>
                         </Row>
-    
-                        {/* <Row style={{marginTop: "40px"}}>
-                            <Col>
-                                <h6 className ="titleRow">Learn more about home water quality test?</h6>
-                                
-                            </Col>
-                        </Row> */}
+                        {   showStdRes && 
+                            <Row style={{marginTop: "40px"}}>
+                                <Col>
+                                    <h3 className ="titleRow"style={{marginBottom:"20px"}}>Water Quality</h3>
+                                    <MetalContentConclusion metal="Copper" metalStd={cuStd}/>
+                                    <MetalContentConclusion metal="Iron" metalStd={ironStd}/>
+                                    <MetalContentConclusion metal="Lead" metalStd={leadStd}/>
+                                    <MetalContentConclusion metal="Nitrate" metalStd={nitrateStd}/>
+                                    <MetalContentConclusion metal="Mercury" metalStd={mercuryStd}/>
+                                    <MetalContentConclusion metal="Chromium" metalStd={chromiumStd}/>
+                                </Col>    
+                            </Row>
+
+                        }
                         <Row style={{marginTop: "60px"}}>
                             <Col>
                                 <a style={{color:"#79a6d2"}} href='https://www.wikihow.com/Test-Water-Quality' class="active" target="_blank">Learn more about home water quality test</a>
@@ -125,7 +133,7 @@ class WaterQualityTestPage extends React.Component {
                         </Row>
                         <Row style={{marginTop: "20px"}}>
                             <Col>
-                                <Link style={{color:"#79a6d2"}} to='/'>Go Back</Link>
+                                <Link style={{color:"#79a6d2"}} to='/address'>Go Back</Link>
                             </Col>
                         </Row>
                     </Col>
@@ -172,6 +180,13 @@ const mapStateToProps = (state) => {
         chromium: state.waterQualityData.chromium,
         nitrate: state.waterQualityData.nitrate,
         mercury: state.waterQualityData.mercury,
+        cuStd: state.waterQualityData.cuStd,
+        leadStd: state.waterQualityData.leadStd,
+        ironStd:  state.waterQualityData.ironStd,
+        mercuryStd:  state.waterQualityData.mercuryStd,
+        chromiumStd:  state.waterQualityData.chromiumStd,
+        nitrateStd:  state.waterQualityData.nitrateStd,
+        showStdRes: state.waterQualityData.showStdRes,
         goodMarkers: state.userTestResults.good_markers,
         badMarkers: state.userTestResults.bad_markers,
         user_lat: state.userTestResults.user_lat,

@@ -45,6 +45,9 @@ class waterQualitySubmission extends React.Component {
 
         return (
             <React.Fragment>
+            <head>
+            <meta http-equiv="refresh" content="1"></meta>
+            </head>
             <div>
             <div>
                 <Row style ={{paddingLeft:"30px"}}>
@@ -53,6 +56,9 @@ class waterQualitySubmission extends React.Component {
                         <Col xs={12}>
                                 <h3 className ="titleRow" id='datafiled'>Input Your Address</h3>
                                 <p className="steps" id='stepfield' >Input your address to retrieve your water system information.</p>
+                                <p className="steps" id='stepfield' >Currently serving following couties:</p>
+                                <p className="steps" id='stepfield' > ALAMEDA/ALPINE/AMADOR/BUTTE/CALAVERAS/COLUSA/CONTRA COSTA</p>
+                                <p className="steps" id='stepfield' >DEL NORTE/EL DORADO/FRESNO/GLENN/HUMBOLDT/IMPERIAL/INYO/KERN</p>
                             </Col>
                             <UserInputField 
                                 label="Address 1"
@@ -86,6 +92,9 @@ class waterQualitySubmission extends React.Component {
                         <Row style={{marginTop: "30px", marginLeft:"35px"}}>
                             <Col>
                                 <input className='button' type="button" value="Submit" onClick={this.onSubmit}/>
+                                {/* <Col xs={12} style={{marginTop: "100px", marginLeft:"50px"}}> */}
+                                <button className='button' type="button" style={{marginLeft:"10px"}} ><Link style={{color:"white"}} to="/test"> Community Water Data</Link></button>
+                                {/* </Col> */}
                             </Col>
                         </Row>
                         <Row>
@@ -104,17 +113,13 @@ class waterQualitySubmission extends React.Component {
                                         <WaterSummaryItem title="Water Quality Score" value={score}/>
                                     </Row> 
                                 </Col>
-                                <Col xs={12} className='summaryItemRow' style={{marginTop: "120px",marginLeft: "60px"}}>  
+                                <Col xs={12} className='summaryItemRow' style={{marginTop: "160px",marginLeft: "60px"}}>  
                                     <Row>
                                         <WaterSummaryItem title="Improve Rate" value={improveRate} />
                                         <WaterSummaryItem title="Total Served Population" value={population} />
                                         <WaterSummaryItem title="Years in Service" value={yearsInService} />
                                         {/* <WaterSummaryItem title="Zip Code" value={zipcode} /> */}
                                     </Row> 
-                                </Col>
-                                <Col xs={12} style={{marginTop: "100px", marginLeft:"50px"}}>
-                                    <Row></Row>
-                                        <button className='button' type="button" ><Link style={{color:"white"}} to="/test"> Community Water Data</Link></button>
                                 </Col>
                             </React.Fragment>)
                         }

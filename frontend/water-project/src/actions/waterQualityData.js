@@ -22,7 +22,7 @@ export const submitWaterQualityData = data =>
         const mercuryStd = data.mercuryStd > MERCURYSTD ? -1 : 1;
         const waterTest = data.cu <= CUSTD && data.iron <= IRONSTD && data.lead <= LEADSTD  && data.chromium <= CRSTD && data.nitrate <= NITRATESTD && data.mercury <= MERCURYSTD ?
                 1 : 0;
-        const response = {cuStd, leadStd, ironStd, chromiumStd, nitrateStd, mercuryStd, showGraphResult: true, ...data};
+        const response = {cuStd, leadStd, ironStd, chromiumStd, nitrateStd, mercuryStd, showStdRes: true, ...data};
         dispatch({
             type: 'EDIT_QUALITY_DATA',
             data: response
@@ -31,7 +31,7 @@ export const submitWaterQualityData = data =>
         // get map markers
         axios({
             method: 'post',
-            url: 'http://localhost:8300/testInput',
+            url: 'http://52.8.169.153//testInput',
             data: {
               address: data.address,
               copper: data.cu,

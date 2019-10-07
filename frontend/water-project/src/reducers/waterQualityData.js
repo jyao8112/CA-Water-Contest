@@ -4,7 +4,15 @@ const waterQualityDefaultState = {
     iron: 2,
     mercury: 0,
     chromium: 3,
-    nitrate: 0
+    nitrate: 0,
+    /* -1: bad; 1: good */
+    cuStd: -1,
+    leadStd: -1,
+    ironStd: -1,
+    mercuryStd: -1,
+    chromiumStd: -1,
+    nitrateStd: -1,
+    showStdRes: false
 };
 
 export default (state = waterQualityDefaultState, action) => {

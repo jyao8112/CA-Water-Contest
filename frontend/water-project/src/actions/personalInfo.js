@@ -15,7 +15,7 @@ export const submitPersonalInfo = info =>
         console.log("[PersonalInfoAction] Sending address and test data back to end...");
         axios({
             method: 'post',
-            url: 'http://localhost:8300/sendAddress',
+            url: 'http://52.8.169.153//sendAddress',
             data: {
               address: info.address
             }
