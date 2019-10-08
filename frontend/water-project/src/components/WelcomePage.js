@@ -20,8 +20,7 @@ export class WelcomePage extends React.Component {
                         <p class="outset"></p>
                         <ul><b>Please note:</b>
                             <li style={{marginTop: "10px",marginLeft:"30px"}}>This is a prototype version with limited data feed by the open databases. </li>
-                            <li style={{marginTop: "10px",marginLeft:"30px",marginRight:"30px"}}>You <b>MAY NOT</b> find your water system infomationa by entering your home address yet, as the official data of water system serving boundaries is still in the process of being completed.</li>
-                            <li style={{marginTop: "10px",marginLeft:"30px"}}>This test version only supports informaion queries of the below-listed counties in California. </li>
+                            <li style={{marginTop: "10px",marginLeft:"30px"}}>As the official data of water system serving boundaries is still in the process of being completed,this test version only supports informaion queries of the below-listed counties in California. </li>
                                 <Row style={{marginTop: "10px"}}>
                                 <Col xs={12} lg={4}>
                                     <ul>
@@ -56,11 +55,11 @@ export class WelcomePage extends React.Component {
                         </ul>
                         </Col>
                         <Col xs={12} lg={6}>
-                        <iframe style={{marginTop:"20px"}}width="540" height="420" src="https://www.youtube.com/embed/PsBkwDi22XA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        <iframe style={{marginTop:"20px"}} width="540" height="420" src="https://www.youtube.com/embed/PsBkwDi22XA" frameBorder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                         </Col>
                     </Row>
                     <Row style={{marginLeft: "60px",marginTop: "5px"}}>
-                        <NavLink className='button'  type="button" to="/address" activeClassName="is-active" style={{margin: "10px"}}>Go To Test</NavLink>
+                        <NavLink className='button' to="/address" activeClassName="is-active" style={{margin: "10px"}}>Go To Test</NavLink>
                     </Row>
                 </div>    
             </React.Fragment>

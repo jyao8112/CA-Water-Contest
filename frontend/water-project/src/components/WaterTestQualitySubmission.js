@@ -45,9 +45,6 @@ class waterQualitySubmission extends React.Component {
 
         return (
             <React.Fragment>
-            <head>
-            <meta http-equiv="refresh" content="1"></meta>
-            </head>
             <div>
             <div>
                 <Row style ={{paddingLeft:"30px"}}>
@@ -57,8 +54,8 @@ class waterQualitySubmission extends React.Component {
                                 <h3 className ="titleRow" id='datafiled'>Input Your Address</h3>
                                 <p className="steps" id='stepfield' >Input your address to retrieve your water system information.</p>
                                 <p className="steps" id='stepfield' >Currently serving following couties:</p>
-                                <p className="steps" id='stepfield' > ALAMEDA/ALPINE/AMADOR/BUTTE/CALAVERAS/COLUSA/CONTRA COSTA</p>
-                                <p className="steps" id='stepfield' >DEL NORTE/EL DORADO/FRESNO/GLENN/HUMBOLDT/IMPERIAL/INYO/KERN</p>
+                                <p style={{color:"#6491AD"}} > ALAMEDA/ALPINE/AMADOR/BUTTE/CALAVERAS/COLUSA/CONTRA COSTA</p>
+                                <p style={{color:"#6491AD"}} > DEL NORTE/EL DORADO/FRESNO/GLENN/HUMBOLDT/IMPERIAL/INYO/KERN</p>
                             </Col>
                             <UserInputField 
                                 label="Address 1"
@@ -92,10 +89,9 @@ class waterQualitySubmission extends React.Component {
                         <Row style={{marginTop: "30px", marginLeft:"35px"}}>
                             <Col>
                                 <input className='button' type="button" value="Submit" onClick={this.onSubmit}/>
-                                {/* <Col xs={12} style={{marginTop: "100px", marginLeft:"50px"}}> */}
-                                <button className='button' type="button" style={{marginLeft:"10px"}} ><Link style={{color:"white"}} to="/test"> Community Water Data</Link></button>
-                                {/* </Col> */}
-                            </Col>
+                            {/* <Col xs={12} style={{marginLeft:"20px"}}>  */}
+                                    <button className='button' type="button" style={{marginLeft:"10px"}} ><Link style={{color:"white"}} to="/test"> Community Water Data</Link></button>
+                            </Col> 
                         </Row>
                         <Row>
                         {showSummary && (
@@ -121,6 +117,11 @@ class waterQualitySubmission extends React.Component {
                                         {/* <WaterSummaryItem title="Zip Code" value={zipcode} /> */}
                                     </Row> 
                                 </Col>
+                                <Row style={{marginTop: "180px",marginLeft: "60px"}}>
+                                    <Col>
+                                        <Link style={{color:"#79a6d2"}} to='/'>Go Back</Link>
+                                    </Col>
+                                </Row>
                             </React.Fragment>)
                         }
                         </Row>
@@ -132,6 +133,7 @@ class waterQualitySubmission extends React.Component {
                                 <Col style={{marginLeft:"30px"}}>
                                 <h3 className ="titleRow" id='datafiled'> Chemical detected value change by year </h3>
                                 <p className="steps" id='stepfield'> Critical chemical dectected from 2013-2019 in your water system</p>
+                                <p className="steps" id='stepfield' style ={{color:"#D1820F"}}> MCLs: Maximum Contaminant Levels</p>
                                 </Col>
                             </Row>
                             <Row>
@@ -179,7 +181,7 @@ class waterQualitySubmission extends React.Component {
                                                 yTitle='nitrate_avg'
                                                 stdValue={WATERSTANDARD.NITRATESTD}
                                             />
-                                    </Row>    
+                                    </Row> 
                                 </Col>
                             </Row>
                         </React.Fragment>
