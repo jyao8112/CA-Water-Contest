@@ -191,7 +191,11 @@ const mapStateToProps = (state) => {
         badMarkers: state.userTestResults.bad_markers,
         user_lat: state.userTestResults.user_lat,
         user_lon: state.userTestResults.user_lon,
-        showGraphResult: state.userTestResults.showGraphResult
+        showGraphResult: state.userTestResults.showGraphResult,
+        addressLineOne:state.personalInfo.addressLineOne,
+        addressLineTwo:state.personalInfo.addressLineTwo,
+        city:state.personalInfo.city,
+        postal:state.personalInfo.postal,
     }
 }
 

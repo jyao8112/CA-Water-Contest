@@ -31,7 +31,7 @@ export const submitWaterQualityData = data =>
         // get map markers
         axios({
             method: 'post',
-            url: 'http://52.8.169.153//testInput',
+            url: 'http://localhost:8300/testInput',
             data: {
               address: data.address,
               copper: data.cu,

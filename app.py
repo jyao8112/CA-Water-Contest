@@ -243,7 +243,7 @@ def senduserlatlon():
     return samples(pwsid,user_lat, user_lon)
 
 def get_lat_lon_from_address(address):
-    api_key = "AIzaSyDQFf4ZmW6ithxv_CjYJxrnkJAox9CYfkg"
+    api_key = "AIzaSyDKfjuAziA90Ehb0byOqduT2Wf-bLdpoeY"
     api_response = requests.get('https://maps.googleapis.com/maps/api/geocode/json?address={0}&key={1}'.format(address, api_key))
     api_response_dict = api_response.json()
     latitude = api_response_dict['results'][0]['geometry']['location']['lat']
