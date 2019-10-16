@@ -133,7 +133,8 @@ class waterQualitySubmission extends React.Component {
                                 <Col style={{marginLeft:"30px"}}>
                                 <h3 className ="titleRow" id='datafiled'> Chemical detected value change by year </h3>
                                 <p className="steps" id='stepfield'> Critical chemical dectected from 2013-2019 in your water system</p>
-                                <p className="steps" id='stepfield' style ={{color:"#D1820F"}}> MCLs: Maximum Contaminant Levels</p>
+                                <p className="steps" id='stepfield' style ={{color:"#0099e6"}}> YAC: Yearly Average Check</p>
+                                <p className="steps" id='stepfield' style ={{color:"#D1820F"}}> MCL: Maximum Contaminant Levels</p>
                                 </Col>
                             </Row>
                             <Row>
